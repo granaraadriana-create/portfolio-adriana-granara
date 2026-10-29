@@ -18,11 +18,11 @@
 h1 {
     font-family: "Merriweather", serif;
     font-size: 4rem;
-    font-weight: 400;
-    font-style: normal;
+    font-weight: 400; /* No setees propiedades que no hacen nada, font-style:normal y font-weight:400 es algo que figma agrega, pero que es el valor por defecto en todos lados */
+    font-style: normal; /* Lo marco en esta regla, pero esta varias veces, revisalos todos */
     color: #800080;
-    min-width: 30rem;
-    max-width: 34rem;
+    min-width: 30rem; /* No uses tamaños tipograficos en cosas estructurales. Pixeles o si necesitas que tenga relacion con la pantalla vh/vw */
+    max-width: 34rem; /* Mismo acá */
     letter-spacing: 2.8px;
 }
 
@@ -170,7 +170,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 153px;
+    gap: 153px; /*Esto es que hay algo mal flexeado. Se rompe en cuanto pasas a una pantalla mas chica. Puede que quieras usar otro tipo de justify-content o align-items. */
     font-size: 1.75rem;
     font-style: normal;
     font-weight: 400;
@@ -436,12 +436,12 @@ footer {
 
         .foto-galeria {
             display: flex;
-            width: 333.385px;
-            height: 498.796px;
-            flex-direction: column;
+            width: 333.385px; /* Ojo con los tamaños fijos. Dejo un comment aca pero pasa en varios lugares. Se nota que esto esta copiado de figma, usa tu criterio para definir alguno de los tamaños a un numero coherente */
+            height: 498.796px; /* Si vas a definir anchos, deja libres los altos para respetar el aspecto de la foto original. Si necesitas cambiar el tamaño del archivo, que asi sea */
+            flex-direction: column; /* El hecho de que tenga flex, me habla de que esta clase no se aplicó a la imagen, sino a un contenedor, ojo con poner tamaños fijos en cosas que no los necesiten */
             align-items: flex-start;
             align-content: flex-start;
-            gap: 6.411px 0;
+            gap: 6.411px 0; 
             flex-wrap: wrap;
             border-radius: 20px;
             object-fit: cover;
