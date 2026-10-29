@@ -6,7 +6,7 @@
 
     body {
         font-family: "SN Pro", sans-serif;
-        font-size: 1.0625rem;
+        font-size: 1.1rem;
         margin: 0;
         padding: 0;
         background-color: #FFFBFD;
@@ -73,7 +73,7 @@ p {
 }
 
 .detalle-figcaption {
-    font-size: 1.065rem;
+    font-size: 1.1rem;
     font-style: normal;
     font-weight: 500;
     line-height: 135.294%;
@@ -81,7 +81,7 @@ p {
 }
 
 .epigrafe {
-    font-size: 0.938rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 300;
     line-height: 146.667%;
@@ -328,7 +328,7 @@ footer {
 
 .info-habilidades {
     display: flex;
-    width: 600px;
+    width: 30%;
     padding-top: 35px;
     flex-direction: column;
     gap: 28px;
@@ -340,7 +340,7 @@ footer {
         align-items: flex-start;
         gap: 10px;
         border-radius: 15px;
-        background: #FFF;
+        background: white;
         box-shadow: 7px 8px 8.3px 0 rgba(219, 112, 147, 0.53);
         justify-content: space-between;
         list-style: none;
@@ -593,7 +593,7 @@ footer {
             overflow-y: auto;
             border-bottom: 1px solid #DB7093;
             font-family: Merriweather;
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-style: normal;
             font-weight: 400;
 
