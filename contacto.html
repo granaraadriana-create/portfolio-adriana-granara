@@ -23,7 +23,7 @@
     <header>
         <h1>Adriana Andrea Granara</h1>
         <nav>
-            <a href="#" target="_blank">Inicio</a>
+            <a href="index.html" target="_blank">Inicio</a>
             <details class="menu-desplegable">
                 <summary>Galería</summary>
                 <div class="submenu-flotante">
@@ -33,13 +33,13 @@
                                     alt="flecha-derecha-blanca" height="14px" width="12px" /></p>
                         </summary>
                         <div class="sub-links">
-                            <a href="#">Revistas</a>
-                            <a href="#">Folletos</a>
+                            <a href="#"target="_blank">Revistas</a>
+                            <a href="#" target="_blank">Folletos</a>
                         </div>
                     </details>
-                    <a href="#">Packaging</a>
-                    <a href="#">Afiches</a>
-                    <a href="#">Fotografía</a>
+                    <a href="#" target="_blank">Packaging</a>
+                    <a href="afiches.html" target="_blank">Afiches</a>
+                    <a href="#" target="_blank">Fotografía</a>
                 </div>
             </details>
             <a href="contacto.html" target="_blank">Contacto</a>
@@ -48,12 +48,14 @@
 
 
     <main class="pagina-contacto">
-        <div class="galeria-intro">
-            <a href="index.html" class="flecha-atras">
-                <img src="img-portfolio/flecha-atras.svg" alt="flecha-atras" height="27.54px" width="30px" />
-            </a>
-            <h2>Contacto</h2>
-        </div>
+        <section class="galeria-intro">
+           <div>
+                <a href="index.html" class="flecha-atras">
+                    <img src="img-portfolio/flecha-atras.svg" alt="flecha-atras" height="27px" width="30px" />
+                </a>
+                <h2>Contacto</h2>
+            </div>
+        </section>
 
         <section class="contactame">
             <div class="dudas">
@@ -64,7 +66,10 @@
 
             <div class="escribime">
                 <div class="formulario-contacto">
-                    <h3>Escribime <img src="img-portfolio/flecha-rosa-izquierda.svg" /> </h3> <!-- h3 no es una etiqueta de contenedor. Si necesitas agregarle cosas a un texto *que son legibles*, por ejemplo un signo, ahi podes usar <span>. En este caso que es una flecha, usa un contenedor por fuera (div x ejemplo) o bien :after (si no lo vieron aún, con un contenedor está bien). Lo importante es que el contenido de h,p, etc., se espera que sea legible como texto por semantica de la etiqueta -->
+                    <div class="membrete-form">
+                        <h3>Escribime</h3>
+                        <img src="img-portfolio/flecha-rosa-izquierda.svg" />
+                    </div>
                     <form class="hoja-formulario" action="mailto:granara.adriana@gmail.com" method="POST"
                         target="_blank" enctype="text/plain">
 
@@ -111,27 +116,30 @@
 
 
     <footer>
-        <p class="footer">También me podés encontrar en</p>
+        <p>También me podés encontrar en</p>
         <ul>
             <li>
                 <a href="#" target="_blank">
-                    <img class="redes" src="img-portfolio/logo-instagram.svg" alt="logo-instagram" height="30px" width="30px" />
+                    <img class="redes" src="img-portfolio/logo-instagram.svg" alt="logo-instagram" height="30px"
+                        width="30px" />
                 </a>
             </li>
             <li>
                 <a href="#" target="_blank">
-                    <img class="redes" src="img-portfolio/logo-behance.svg" alt="logo-instagram" height="30px" width="30px" />
+                    <img class="redes" src="img-portfolio/logo-behance.svg" alt="logo-instagram" height="30px"
+                        width="30px" />
                 </a>
             </li>
             <li>
                 <a href="#" target="_blank">
-                    <img class="redes" src="img-portfolio/logo-linkedin.svg" alt="logo-instagram" height="30px" width="30px" />
+                    <img class="redes" src="img-portfolio/logo-linkedin.svg" alt="logo-instagram" height="30px"
+                        width="30px" />
                 </a>
             </li>
         </ul>
         <div class="legales">
-            <p class="footer">Cátedra Wischñevsky 2026</p>
-            <p class="footer">Todos los derechos reservados</p>
+            <p>Cátedra Wischñevsky 2026</p>
+            <p>Todos los derechos reservados</p>
         </div>
     </footer>
 </body>

@@ -18,22 +18,20 @@
 h1 {
     font-family: "Merriweather", serif;
     font-size: 4rem;
-    font-weight: 400; /* No setees propiedades que no hacen nada, font-style:normal y font-weight:400 es algo que figma agrega, pero que es el valor por defecto en todos lados */
-    font-style: normal; /* Lo marco en esta regla, pero esta varias veces, revisalos todos */
+    font-style: normal;
+    font-weight: 500;
     color: #800080;
-    min-width: 30rem; /* No uses tamaños tipograficos en cosas estructurales. Pixeles o si necesitas que tenga relacion con la pantalla vh/vw */
-    max-width: 34rem; /* Mismo acá */
+    min-width: 500px;
+    max-width: 30vw;
     letter-spacing: 2.8px;
 }
 
 h2 {
     font-family: "Merriweather", serif;
     color: #800080;
-    font-size: 24px;
     font-style: normal;
+    font-size: 1.5rem;
     font-weight: 500;
-    line-height: 133.333%;
-    height: 50px;
 }
 
 h3 {
@@ -41,7 +39,6 @@ h3 {
     font-size: 1.3rem;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
     letter-spacing: 1px;
     color: #DB7093;
 }
@@ -51,7 +48,6 @@ h4 {
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 800;
-    line-height: 170%;
     color: #800080;
 }
 
@@ -62,7 +58,6 @@ p {
 
 .links-nav {
     font-size: 1.75rem;
-    font-style: normal;
     font-weight: 400;
     color: white;
     display: flex;
@@ -74,51 +69,44 @@ p {
 
 .detalle-figcaption {
     font-size: 1.1rem;
-    font-style: normal;
     font-weight: 500;
-    line-height: 135.294%;
     padding-left: 20px;
 }
 
 .epigrafe {
     font-size: 1rem;
-    font-style: normal;
     font-weight: 300;
-    line-height: 146.667%;
+    color: black;
 }
 
 .epigrafe-fecha {
-    font-size: 14px;
+    font-size: 0.9rem;
     font-style: italic;
     font-weight: 200;
-    line-height: 157.143%;
+    color: black;
 }
 
 .institucion {
     font-size: 19px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0.76px;
+    letter-spacing: 1px;
     color: #800080;
 }
 
 .año-institucion {
     font-family: Merriweather;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: italic;
     font-weight: 300;
-    line-height: normal;
     color: #800080;
     padding: 0 0 0 40px;
 }
 
 .detalle-institucion {
     font-family: Merriweather;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 156.25%;
     color: black;
     padding: 0 0 0 40px;
 }
@@ -131,11 +119,9 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 64%;
     height: 150px;
     color: #DB7093;
     justify-content: center;
-
 }
 
 a {
@@ -144,6 +130,10 @@ a {
 }
 
 ul {
+    list-style: none;
+}
+
+ol {
     list-style: none;
 }
 
@@ -168,13 +158,10 @@ nav {
     height: 70px;
     background-color: #800080;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 153px; /*Esto es que hay algo mal flexeado. Se rompe en cuanto pasas a una pantalla mas chica. Puede que quieras usar otro tipo de justify-content o align-items. */
+    justify-content: space-evenly;
     font-size: 1.75rem;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
 
     a {
         color: white;
@@ -183,6 +170,10 @@ nav {
     summary {
         list-style: none;
         color: white;
+    }
+
+    .menu-hamburguesa {
+        opacity: 0;
     }
 }
 
@@ -237,10 +228,9 @@ footer {
 
     p {
         font-family: Merriweather;
-        font-size: 1.25rem;
         font-style: normal;
+        font-size: 1.25rem;
         font-weight: 500;
-        line-height: 150%;
         color: white;
     }
 
@@ -271,13 +261,26 @@ footer {
 
 
 .galeria-intro {
-    width: 20%;
+    width: 100%;
     display: flex;
-    height: 70px;
-    padding: 40px;
-    align-items: baseline;
-    justify-content: space-between;
+    padding: 70px 30px 70px 30px;
+    gap: 30px;
+    align-items: center;
 
+    div {
+        display: flex;
+        width: 30%;
+        justify-content: space-evenly;
+        align-items: center;
+
+        h2 {
+            text-align: left;
+        }
+    }
+}
+
+.flecha-atras {
+    width: 10%;
 }
 
 
@@ -286,12 +289,12 @@ footer {
 
 
 .saludo {
-    height: 263.204px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 35px;
     background-color: #FFF5E8;
+    padding: 40px;
 
     img {
         border-radius: 50%;
@@ -302,23 +305,21 @@ footer {
 .intro {
     color: #800080;
     font-size: 1.25rem;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
     max-width: 20%;
+    min-width: 220px;
 }
 
 .sobre-mi {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: baseline;
     gap: 70px;
     padding: 40px 0 40px 0;
-
 }
 
 .presentacion {
-    max-width: 23%;
+    max-width: 500px;
 
     p {
         color: #800080;
@@ -332,6 +333,7 @@ footer {
     padding-top: 35px;
     flex-direction: column;
     gap: 28px;
+    max-width: 650px;
 
     summary {
         display: flex;
@@ -362,11 +364,9 @@ footer {
 
     ul {
         font-family: Merriweather;
-        font-size: 16px;
         font-style: normal;
+        font-size: 1rem;
         font-weight: 400;
-        line-height: 156.25%;
-        letter-spacing: 0.64px;
         gap: 7px;
     }
 }
@@ -377,19 +377,20 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 23px;
+    flex-wrap: wrap;
 
     h2 {
-        width: 67%;
+        width: 57%;
+        max-width: 1230px
     }
 
     article {
-        width: 100%;
+        max-width: 1230px;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
-        align-content: flex-start;
-        gap: 24px;
+        gap: 40px;
         flex-wrap: wrap;
+        z-index: 50;
 
         figure {
             margin: 0
@@ -431,20 +432,14 @@ footer {
 
     .galeria-arriba {
         display: flex;
-        align-items: center;
-        gap: 20px;
+        gap: 30px;
+        max-width: 1230px;
 
         .foto-galeria {
             display: flex;
-            width: 333.385px; /* Ojo con los tamaños fijos. Dejo un comment aca pero pasa en varios lugares. Se nota que esto esta copiado de figma, usa tu criterio para definir alguno de los tamaños a un numero coherente */
-            height: 498.796px; /* Si vas a definir anchos, deja libres los altos para respetar el aspecto de la foto original. Si necesitas cambiar el tamaño del archivo, que asi sea */
-            flex-direction: column; /* El hecho de que tenga flex, me habla de que esta clase no se aplicó a la imagen, sino a un contenedor, ojo con poner tamaños fijos en cosas que no los necesiten */
-            align-items: flex-start;
-            align-content: flex-start;
-            gap: 6.411px 0; 
-            flex-wrap: wrap;
             border-radius: 20px;
             object-fit: cover;
+            max-width: 1050px;
             transition: filter 0.7s ease-out;
         }
 
@@ -468,16 +463,14 @@ footer {
 
     .galeria-abajo {
         display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        gap: 24px;
+        gap: 50px;
+        max-width: 1230px;
 
         .foto-galeria {
             display: flex;
-            justify-content: center;
-            align-items: flex-end;
             border-radius: 20px;
             object-fit: cover;
+            max-width: 1050px;
             transition: filter 0.7s ease-out;
         }
 
@@ -505,10 +498,10 @@ footer {
 .efecto-galeria {
     box-sizing: border-box;
     background-color: #800080;
-    opacity: 0;
     transition: opacity 0.7s ease-out;
     border-radius: 20px;
     background: linear-gradient(to top, #800080, transparent);
+    opacity: 0;
 }
 
 .efecto-galeria:hover {
@@ -526,33 +519,37 @@ footer {
 
 .contactame {
     width: 100%;
-    height: 500px;
     gap: 60px;
     display: flex;
     justify-content: center;
-
+    align-items: center;
+    padding-bottom: 40px;
+    z-index: 20;
 }
 
 .dudas {
-    width: 320px;
+    width: 20%;
+    min-width: 184px;
+    max-width: 22%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 400px;
-
-    h2 {
-        line-height: 133.333%;
-        height: 80px;
-    }
 }
 
 .escribime {
-    width: 360px;
+    width: 30%;
     background-color: white;
     border-radius: 20px;
-    min-width: 30%;
+    min-width: 234px;
     max-width: 50%;
-    height: 400px;
+    box-shadow: 7px 8px 8.3px 0 rgba(219, 112, 147, 0.53);
+}
+
+.membrete-form {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row-reverse;
+    gap: 20px;
 }
 
 .formulario-contacto {
@@ -561,10 +558,6 @@ footer {
     padding: 0 25px 25px 25px;
 
     h3 {
-        display: flex;
-        align-items: baseline;
-        flex-direction: row-reverse;
-        gap: 20px;
         margin-bottom: 10px;
     }
 
@@ -577,7 +570,6 @@ footer {
             font-size: 19px;
             font-style: normal;
             font-weight: 500;
-            line-height: normal;
             letter-spacing: 0.76px;
             color: #800080;
         }
@@ -596,13 +588,12 @@ footer {
             font-size: 1rem;
             font-style: normal;
             font-weight: 400;
-
-
         }
 
         .boton-enviar {
             width: 30%;
             height: 30px;
+            min-width: 70px;
             display: flex;
             justify-content: center;
             align-self: center;
@@ -610,7 +601,6 @@ footer {
             font-size: 1rem;
             font-style: normal;
             font-weight: 700;
-            line-height: normal;
             letter-spacing: 0.76px;
             color: white;
             background-color: #DB7093;
@@ -656,6 +646,62 @@ footer {
 }
 
 
+/*Configuraciones archivo Afiches*/
+
+.galeria-afiches {
+    display: flex;
+    flex-direction: column;
+}
+
+.editorial {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 40px;
+    gap: 30px;
+
+    h4 {
+        color: #DB7093;
+    }
+
+    p {
+        padding: 0;
+    }
+
+    img {
+        border-radius: 10px;
+    }
+
+    .principal {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: center;
+        gap: 30px;
+        flex-direction: row-reverse;
+
+        figcaption {
+            max-width: 270px;
+        }
+    }
+
+    .otras {
+        max-width: 100%;
+        display: flex;
+        gap: 30px;
+
+        figure {
+            margin: 0;
+        }
+    }
+
+    figcaption {
+        max-width: 270px;
+    }
+}
+
+
 /*Animaciones*/
 
 @keyframes rotarFlorcita {
@@ -667,5 +713,135 @@ footer {
     100% {
         transform: rotate(-360deg);
 
+    }
+}
+
+
+/*Media Queries*/
+
+
+@media screen and (max-width: 500px) {
+
+    body {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .galeria-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 490px;
+
+        div {
+            gap: 40px;
+        }
+
+        p {
+            margin: 0;
+            padding: 10px;
+        }
+    }
+
+    .editorial {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+
+        figure {
+            margin: 0;
+
+            figcaption {
+                padding: 10px;
+            }
+        }
+
+        .principal {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                max-width: 470px;
+                height: auto;
+                padding: 10px;
+                border-radius: 15px;
+            }
+        }
+
+        .otras {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .saludo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sobre-mi {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .contactame {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .escribime {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .info-habilidades {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .galeria-arriba {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .galeria-abajo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .efecto-galeria {
+        box-sizing: border-box;
+        background-color: #800080;
+        transition: opacity 0.7s ease-out;
+        border-radius: 20px;
+        background: linear-gradient(to top, #800080, transparent);
+        opacity: 1;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .legales {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
